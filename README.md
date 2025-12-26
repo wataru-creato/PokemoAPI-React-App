@@ -31,6 +31,16 @@ App
      ├ PokemonCard
      └ PokemonModal
 
+Main
+├─ state
+│   └─ pokemons: []       ← API結果をここに
+├─ useEffect
+│   └─ 初回レンダリング時に fetch
+├─ render
+│   └─ PokemonList に pokemons を渡す
+├─ PokemonCard
+│   └─ モーダル開くときに詳細API fetch
+
 ## State設計
 
 ### App

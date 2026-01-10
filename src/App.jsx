@@ -7,10 +7,6 @@ import Main from './main.jsx'
 function App() {
   const [currentUser,setCurrentUser]=useState(null);
 
-  const[favoritePokemonIds,setFavoritePokemonIds]=useState([]);
-
-  const[memos,setMemos]=useState({});
-
   const handleLogin=(user)=>{
     setCurrentUser(user);
     console.log({user});

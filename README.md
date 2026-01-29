@@ -1,58 +1,64 @@
 # PokemoAPI-React-App
-PokemonAPI-playground【https://github.com/wataru-creato/PokemoAPI-playground】
-(JSで作成)の完成版である。
-React+PHP+DBを使用し、フルスタック寄りの作品を目指したものである。
+React+PHP+MySQLを用いて作成したポケモン図鑑アプリです。
+ログイン機能を実装し、ユーザのお気に入りポケモン登録とそれぞれのポケモンのメモを保存できます。
+フロントだけでなく、バックエンドも実装し、一通りのシステムの流れを学びました。
 
-DOM操作が複雑化した課題を、Reactによる状態管理と
-コンポーネント設計で解決することを目的としている。
+## デモ動画
+
+
+## 使用技術
+
+## フロントエンド
+- React
+- Tailwind CSS
+
+## バックエンド
+- PHP
+- My SQL
+
+## API
+- PokeAPI
+
+## DB設計
+
+## DB構成
+-pokemon_react_app
+
+Tables
+- users(id,username,password_hash)
+- favorites(id,user_id,pokemon_id)
+- memos(id,user_id,pokemon_id,memo_text)
+
 
 ## 機能一覧
 
 - ログイン機能
-- ユーザごとにお気に入り・メモを管理
 - 世代ごとに絞り込み
-- 名前検索
+- ポケモンごとの詳細情報
+- ユーザごとにお気に入り・メモを管理
 
+## 工夫した点
+- お気に入り・メモをDBでユーザごとに管理
 
-## 設計方針
+## 今後の改善予定
 
-- PokemonAPI-playground(https://github.com/wataru-creato/PokemoAPI-playground)
-ではDOM操作が複雑になってしまったため、Reactに移行
-- stateは「ユーザ依存のもの」「その画面でローカルなもの（完結するもの）」で分離
-- 派生したデータにはstateをもたない
+- 
+
 
 ## コンポーネント構成
 
-App
- ├ Login
- ├ Register
- └ Main
-     ├ PokemonList
-     ├ PokemonCard
-     └ PokemonModal
+- App
+- Login:認証
+- Register:ユーザの新規登録
+- Main:一覧表示と状態管理
+- Modal:詳細表示とお気に入り、メモ編集
+- PokemonCard:一覧表示
+- FavoriteList:ユーザのお気に入りポケモンの情報
 
-Main
-├─ state
-│   └─ pokemons: []       ← API結果をここに
-├─ useEffect
-│   └─ 初回レンダリング時に fetch
-├─ render
-│   └─ PokemonList に pokemons を渡す
-├─ PokemonCard
-│   └─ モーダル開くときに詳細API fetch
 
 ## State設計
 
-### App
-- currentUser
-- favoritePokemonIds
-- memos
+状態は以下の2種類に分けて管理しました。
 
-### Main
-- pokemons
-- selectedPokemonId
-- visibleCount
-- selectedGeneration
-- searchText
-- showFavoritesOnly
-<!-- のちになぜここに設計したのかをそれぞれ説明できたほうがいい -->
+- 認証ユーザに依存する情報(App)
+- 一覧表示など画面内で完結する情報(Main)

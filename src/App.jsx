@@ -9,13 +9,25 @@ function App() {
 
   const handleLogin=(user)=>{
     setCurrentUser(user);
-    console.log({user});
   }
   
-  const handleLogout=(user)=>{
-    setCurrentUser(null);
-    console.log({user});
-  }
+  const handleLogout=async()=>{
+    const confirm=window.confirm("ほんとうにログアウトしますか？");
+     if(!confirm)return;
+
+    try{
+      await fetch("http://localhost/pokemonAPI-React/logout.php",{
+        method:"POST",
+        credentials:"include",
+        
+      });
+      setCurrentUser(null);
+      alert("ログアウト成功！");
+    }catch(error){
+      console.log("ログアウト失敗",error);
+
+    } 
+  };
  
   return (
     <>

@@ -1,3 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'ContiNeue2P';
+  src: url('./assets/fonts/ContiNeue2P-1.0.1.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,17 +34,11 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+body{
+  height: 100%;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* display: flex;
+  place-items: center; */
 }
 
 button {
@@ -46,9 +52,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+/* button:hover {
+  border-color: #646cff; */
+/* } */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

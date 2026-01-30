@@ -49,7 +49,7 @@ function Register({onBack}){
             <h2>しんきでにゅうりょくしてください</h2>
             <input type="text" name="user" id="user" onChange={(e)=>setNewUsername(e.target.value)} placeholder="ユーザ名" className="appearance-none block bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none"/><br/>
             <input type="password" name="pass" id="pass" onChange={(e)=>setNewPassword(e.target.value)} placeholder="パスワード" className="appearance-none block bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none"/>
-            <button type="submit" name="login" id="loginBtn" onClick={handleSubmit} className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] hover:translate-x-[3px] hover:translate-y-[3px] hover:[box-shadow:0px_0px_rgb(82_82_82)]">▶　とうろくする</button>
+            <br/><button type="submit" name="login" id="loginBtn" onClick={handleSubmit} className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] hover:translate-x-[3px] hover:translate-y-[3px] hover:[box-shadow:0px_0px_rgb(82_82_82)]">▶　とうろくする</button>
             </div>
             </div>
             </div>
@@ -67,8 +67,8 @@ function Register({onBack}){
 
 
 
-            <div className="border-8 border-black rounder-lg fixed bottom-16 right-10  bg-gray-50 z-20">
-            <ul className="text-4xl px-10 py-20 flex flex-col gap-20 "><a onClick={()=>onBack(false)}>▶　ログインがめんにもどる</a></ul>
+            <div className="border-8 border-black rounder-lg fixed bottom-20 right-10  bg-gray-50 z-20">
+            <button className="text-4xl px-10 py-20 flex flex-col gap-20 " onClick={()=>onBack(false)}>▶　ログインがめんにもどる</button>
             </div>
 
 

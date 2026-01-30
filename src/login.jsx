@@ -75,10 +75,10 @@ function Login({onLogin}){
             </div>
             </div>
 
-        <div className="border-8 border-black rounded-lg fixed bottom-16 right-10  bg-gray-50 z-20">
-            <ul className="text-4xl px-10 py-20 flex flex-col gap-20 ">
+        <div className="border-8 border-black rounded-lg fixed bottom-20 right-10  bg-gray-50 z-20">
+            <ul className="text-4xl px-2 py-20 flex flex-col gap-10 ">
                 <li onClick={()=>setShowLoginForm(prev=>!prev)}>▶　ユーザでログインする</li>
-                <button onClick={()=>setIsRegister(true)}>▶　しんきでユーザをとうろくする</button>
+                <button onClick={()=>setIsRegister(true)}>▶　しんきとうろくする</button>
             </ul>
             </div>
             

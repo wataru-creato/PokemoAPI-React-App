@@ -73,7 +73,6 @@ function Modal({pokemonId,onClose,onFavorite,memo,onMemo}){
             </div>
             </div>
             <textarea value={memo} onChange={(e)=>onMemo(pokemonId,e.target.value)} rows="3" className="bg-gray-200 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body text-xl mt-8 border-2 border-black rounder-lg" placeholder="メモをのこせます..."></textarea>
-            {/* あとでCSSとかで「・」を消すように設定する */}
         </div>
     );
 }

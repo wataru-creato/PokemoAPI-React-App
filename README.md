@@ -5,6 +5,10 @@ React+PHP+MySQLを用いて作成したポケモン図鑑アプリです。
 
 ## デモ動画
 
+
+https://github.com/user-attachments/assets/cd7dcd55-a145-4400-9092-30a7d58afd57
+
+
 ## 使用技術
 
 ## フロントエンド

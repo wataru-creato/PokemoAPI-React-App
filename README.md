@@ -14,9 +14,6 @@ https://github.com/user-attachments/assets/cd7dcd55-a145-4400-9092-30a7d58afd57
 - Tailwind CSS(UIの調整のため)
 
 ## バックエンド
-
-
-
  
 - PHP
 - My SQL(ユーザデータ管理)
@@ -30,9 +27,12 @@ https://github.com/user-attachments/assets/cd7dcd55-a145-4400-9092-30a7d58afd57
 ## DB構成
 
 Tables
-- users(id,username,password_hash)
-- favorites(id,user_id,pokemon_id)
-- memos(id,user_id,pokemon_id,memo_text)
+- **users**(id,username,password_hash)
+    - (username)にユニーク制約を設定し、同じユーザ名で複数登録できないようにしました。
+- **favorites**(id,user_id,pokemon_id)
+    - (user_id,pokemon_id)にユニーク制約を設定し、同じポケモンを重複してお気に入り登録できないようにしました。
+- **memos**(id,user_id,pokemon_id,memo_text)
+    - (user_id,pokemon_id)にユニーク制約を設定し、1ユーザにつき1ポケモンに1つのメモを保持するようにしました。
 
 
 ## 機能一覧
@@ -44,10 +44,12 @@ Tables
 
 ## 工夫した点
 - お気に入り・メモをDBでユーザごとに管理しました。
-- React-PHP-MySQLと役割分担できる構成にしました。
-- React側で「認証系(App)」と「表示系(Main)」に分離し、責任をわけることを意識しました。
-- メモ保存ボタンを自動更新にすることで、操作をシンプルにするUIを意識しました。
-- 初代ポケモン風のUIにすることで、世界観を大事にしました。
+- React-PHP-MySQLと役割分担できる構成にし、CRUDを一通り実装しました。
+- React側で「認証系(App)」と「表示系(Main)」に分離し、責任をわけることをしました。
+- SQLはユーザ入力を直接使わず、不正なSQL実行を防ぐようにしました。
+
+<details>
+<summary>詳細（学んだ点・改善予定）</summary>
 
 ## 学んだ点
 - Cookie認証で詰まった経験から、credentials設定など通信の仕様を理解した。
@@ -60,6 +62,9 @@ Tables
 - 「つづきをよむ」ボタンの連打時に発生するエラーを防ぐために、ローディング制限を実装する。
 - まだMainの責務が大きいので整理する。
 - ローカル環境からほかの人が使えるような環境に整備する。
+
+
+</details>
 
 
 ## コンポーネント構成

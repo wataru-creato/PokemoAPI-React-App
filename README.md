@@ -44,39 +44,39 @@ Tables
 
 ## インストール
 
-- 1.リポジトリをクローンします。
+**- 1.リポジトリをクローンします。**
 まずプロジェクトをローカルにコピーします。
-````
+```
 git clone https://github.com/wataru-creato/PokemonAPI-React-App.git
 cd PokemonAPI-React-App
-````
+```
 
-- 2.MySQLを使えるようにする。
+**- 2.MySQLを使えるようにする。**
 
 まずMySQLにログインします。
 ```
-mysql -u root -pp
+mysql -u root -p
 ```
 
 MySQL内で以下を実行してデータベースを作成します。
 
-````
+```
 CREATE DATABASE pokemon_react_app;
-````
+```
 
 プロジェクトのルートフォルダで以下を実行し、テーブルを作成します。
 
-````
+```
 mysql -u root -p pokemon_react_app < database/schema.sql
-````
+```
 
-- 3.backendフォルダのセットアップ
+**- 3.backendフォルダのセットアップ**
 
 backendフォルダで依存関係をインストールします。
-````
+```
 cd backend
 composer install
-````
+```
 
 PHPサーバを起動します。
 
@@ -84,12 +84,12 @@ PHPサーバを起動します。
 php -S localhost:8000
 ```
 
-ブラウザでいかにアクセスするとAPIが動作します。
+ブラウザで以下にアクセスするとAPIが動作します。
 ```
 http://localhost:8000
 ```
 
-- 4.frontendファルダのセットアップ
+**- 4.frontendファルダのセットアップ**
 
 ```
 cd frontend
@@ -107,16 +107,17 @@ npm run dev
 http://localhost:5173
 ```
 
-- 5.データベースをセットアップ
+**- 5.データベースをセットアップ**
 
 DB接続情報を設定するために、backendフォルダ内で以下を実行します。
 
-
-```windows
+windows
+```
 copy db_example.php db.php
 ```
 
-```Mac/Linux
+Mac/Linux
+```
 cp db_example.php db.php
 ```
 

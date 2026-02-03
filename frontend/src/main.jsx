@@ -5,8 +5,8 @@ import Modal from './Modal.jsx'
 import FavoriteList from './FavoriteList.jsx'
 import { addFavoriteAPI, getFavoriteAPI, removeFavoriteAPI, deleteFavoriteAllAPI } from '../src/api/favorite.js'
 import { memoEditAPI } from '../src/api/memo.js'
-import './index.css'
-import bg from "./img/pokemon_background_free.jpg";
+import '../index.css'
+import bg from "../img/pokemon_background_free.jpg";
 
 function Main({ currentUser, onLogout }) {
 
@@ -27,7 +27,7 @@ function Main({ currentUser, onLogout }) {
 
     async function FirstFetchMemo() {
       try {
-        const res = await fetch("http://localhost/pokemonAPI-React/memo.php",
+        const res = await fetch("http://localhost/pokemonAPI-React/backend/memo.php",
           {
             method: "GET",
             credentials: "include",

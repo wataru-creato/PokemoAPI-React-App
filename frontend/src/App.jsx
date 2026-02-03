@@ -12,11 +12,11 @@ function App() {
   }
   
   const handleLogout=async()=>{
-    const confirm=window.confirm("ほんとうにログアウトしますか？");
-     if(!confirm)return;
+    const IsConfirm=window.confirm("ほんとうにログアウトしますか？");
+     if(!IsConfirm)return;
 
     try{
-      await fetch("http://localhost/pokemonAPI-React/logout.php",{
+      await fetch("http://localhost/pokemonAPI-React/backend/logout.php",{
         method:"POST",
         credentials:"include",
         

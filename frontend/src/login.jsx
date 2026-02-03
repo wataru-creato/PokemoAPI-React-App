@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from "react";
 import Register from './Register.jsx'
-import bg from "./img/pokemon_background_free.jpg";
+import bg from "../assets/pokemon_background_free.jpg";
 
 function Login({onLogin}){
     const [username,setUsername]=useState("");
@@ -18,7 +18,7 @@ function Login({onLogin}){
     };
        
        try{
-            const res=await fetch("http://localhost/pokemonAPI-React/login.php",{
+            const res=await fetch("http://localhost/pokemonAPI-React/backend/login.php",{
                 method:"POST",
                 credentials: "include",
                 headers:{

@@ -1,5 +1,5 @@
 import {useState} from "react";
-import bg from "./img/pokemon_background_free.jpg";
+import bg from "../assets/pokemon_background_free.jpg";
 
 function Register({onBack}){
 
@@ -17,8 +17,9 @@ function Register({onBack}){
         };
 
         try{
-            const res=await fetch("http://localhost/PokemonAPI-React/register.php",{
+            const res=await fetch("http://localhost/PokemonAPI-React/backend/register.php",{
                     method:"POST",
+                    credentials: "include",
                     headers:{
                         "Content-Type":"application/json"
                     },

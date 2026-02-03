@@ -17,7 +17,7 @@ export function getFavoriteAPI(userId, pokemonId) {
 
 async function fetchFavorite(state,userId,pokemonId) {
     try {
-        const res = await fetch("http://localhost/pokemonAPI-React/favorite.php", {
+        const res = await fetch("http://localhost/pokemonAPI-React/backend/favorite.php", {
             method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },

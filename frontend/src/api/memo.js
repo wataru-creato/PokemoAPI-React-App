@@ -5,7 +5,7 @@ export function memoEditAPI(userId,pokemonId,memoText){
 
 async function Memo(userId, pokemonId, memo){
     try{
-        const res=await fetch("http://localhost/pokemonAPI-React/memo.php",{
+        const res=await fetch("http://localhost/pokemonAPI-React/backend/memo.php",{
             method: "POST",
             credentials: "include",
             headers:{"Content-Type":"application/json"},

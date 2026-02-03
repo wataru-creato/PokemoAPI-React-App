@@ -3,6 +3,10 @@ React+PHP+MySQLを用いて作成したポケモン図鑑アプリです。
 ログイン機能を実装し、ユーザのお気に入りポケモン登録とそれぞれのポケモンのメモを保存できます。
 ReactとPHPを用いてフロントとバックを分離し、データ管理までの一通りを実装しました。
 
+![Demo Screenshot](../Pokemon-React-app/frontend/img/pokemon_react_app2.png)
+![Demo Screenshot](../Pokemon-React-app/frontend/img/pokemon_react_app1.png)
+
+
 ## 📺デモ動画
 
 https://github.com/user-attachments/assets/cd7dcd55-a145-4400-9092-30a7d58afd57

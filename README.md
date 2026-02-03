@@ -42,6 +42,88 @@ Tables
 - ポケモンごとの詳細情報
 - ユーザごとにお気に入り・メモを管理
 
+## インストール
+
+- 1.リポジトリをクローンします。
+まずプロジェクトをローカルにコピーします。
+````
+git clone https://github.com/wataru-creato/PokemonAPI-React-App.git
+cd PokemonAPI-React-App
+````
+
+- 2.MySQLを使えるようにする。
+
+まずMySQLにログインします。
+```
+mysql -u root -pp
+```
+
+MySQL内で以下を実行してデータベースを作成します。
+
+````
+CREATE DATABASE pokemon_react_app;
+````
+
+プロジェクトのルートフォルダで以下を実行し、テーブルを作成します。
+
+````
+mysql -u root -p pokemon_react_app < database/schema.sql
+````
+
+- 3.backendフォルダのセットアップ
+
+backendフォルダで依存関係をインストールします。
+````
+cd backend
+composer install
+````
+
+PHPサーバを起動します。
+
+```
+php -S localhost:8000
+```
+
+ブラウザでいかにアクセスするとAPIが動作します。
+```
+http://localhost:8000
+```
+
+- 4.frontendファルダのセットアップ
+
+```
+cd frontend
+npm install
+```
+
+開発サーバを起動します。
+
+```
+npm run dev
+```
+
+ブラウザで以下にアクセスしてください。
+```
+http://localhost:5173
+```
+
+- 5.データベースをセットアップ
+
+DB接続情報を設定するために、backendフォルダ内で以下を実行します。
+
+
+```windows
+copy db_example.php db.php
+```
+
+```Mac/Linux
+cp db_example.php db.php
+```
+
+その後db.phpを開き、自分の環境のMySQLパスワードを設定してください。
+
+
+
 ## 工夫した点
 - お気に入り・メモをDBでユーザごとに管理しました。
 - React-PHP-MySQLと役割分担できる構成にし、CRUDを一通り実装しました。
